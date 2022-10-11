@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: black;
+  padding: 0 30px;
+  color: white;
+}
+.nav-left {
+  color: #3a9fa4;
+}
+.nav-right ul li {
+  list-style: none;
+  text-transform: uppercase;
+}
+.nav-right ul {
+  display: flex;
+  gap: 30px;
+}
+.nav-right ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.nav-right ul li a:after {
+  content: "";
+  position: absolute;
+  background-color: #3a9fa4;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.nav-right ul li a:hover:after {
+  color: #fff;
+  width: 100%;
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+}
+
+#sidebarLeft {
+  position: fixed;
+  left: -300px;
+  width: 300px;
+  background-color: rgb(6, 118, 153);
+  opacity: 0.7;
+  height: 90vh;
+  transition: 0.5s;
+}
+#sidebarLeft.active {
+  left: 0px;
+}
+#sidebarLeft ul {
+  margin-top: 30px;
+  position: relative;
+}
+#sidebarLeft ul li {
+  list-style: none;
+  padding: 10px 40px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+}
+#sidebarLeft ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+#sidebarLeft ul li:hover {
+  background-color: #1d399c;
+}
+#toggle {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #3a9fa4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#toggle::before {
+  content: "";
+  position: relative;
+  width: 28px;
+  height: 2px;
+  background-color: #fff;
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+#toggle::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background-color: #fff;
+  transform: translateY(5px);
+  transition: 0.2s;
+}
+
+#toggle.active::before {
+  transform: translateY(0px) rotate(45deg);
+}
+#toggle.active::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.sidebar-right {
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.665), rgba(0, 0, 0, 0.58)),
+    url(./lab3.jpg) no-repeat center center/cover;
+  height: 90vh;
+}
+.container {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 1;
+  padding: 20px;
+  color: white;
+}
+.container .header {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.container .title {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 4px;
+  color: #3a9fa4;
+}
+.container .para {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.button {
+  margin-top: 40px;
+  width: 190px;
+  height: 43px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  border: 2px solid #3a9fa4;
+  background-color: transparent;
+  cursor: pointer;
+}
